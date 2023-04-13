@@ -10,7 +10,7 @@ class TabletHomeView extends StatelessWidget {
       body: Center(
         child: Text(
           'Tablet\n H O M E \n ${size.width}',
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
       ),
     );
