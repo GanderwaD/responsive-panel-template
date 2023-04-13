@@ -11,19 +11,18 @@ class MobileHomeView extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'M O B İ L E',
-            style: TextStyle(color: Colors.amber),
+          Text(
+            'M O B I L E',
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           const Text(
             'H O M E',
-            style: TextStyle(color: Colors.amber),
           ),
           Text(
             '${size.width.toInt()}',
-            style: const TextStyle(color: Colors.amber),
           ),
-          const SizedBox(height: 100),
+          // const SizedBox(height: 100),
+          Container(height: 100),
           const ThemeSwitcher()
         ],
       ),
