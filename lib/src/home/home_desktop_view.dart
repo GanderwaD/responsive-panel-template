@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../theme/theme.dart';
+import 'package:responsive_panel_template/src/constants.dart';
+import 'package:responsive_panel_template/src/theme/theme.dart';
 
 class DesktopHomeView extends StatelessWidget {
   const DesktopHomeView({super.key});
@@ -8,23 +8,28 @@ class DesktopHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+    return BaseScaffold(
+      title: 'D E S K T O P',
+      isDesktop: true,
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'D E S K T O P',
-            style: Theme.of(context).textTheme.bodyMedium,
+          const MyDrawer(),
+          Expanded(flex: 3, child: Container()),
+          Expanded(
+            child: Container(
+              decoration: const BoxDecoration(
+                color: darkBackgroundColor,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 5.0,
+                    blurStyle: BlurStyle.solid,
+                    offset: Offset(0, -5),
+                  ),
+                ],
+              ),
+            ),
           ),
-          const Text(
-            'H O M E',
-          ),
-          Text(
-            '${size.width.toInt()}',
-          ),
-          // const SizedBox(height: 100),
-          Container(height: 100),
-          const ThemeSwitcher()
         ],
       ),
     );

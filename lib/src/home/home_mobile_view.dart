@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_panel_template/src/constants.dart';
 import 'package:responsive_panel_template/src/theme/theme.dart';
 
 class MobileHomeView extends StatelessWidget {
@@ -7,25 +9,6 @@ class MobileHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'M O B I L E',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const Text(
-            'H O M E',
-          ),
-          Text(
-            '${size.width.toInt()}',
-          ),
-          // const SizedBox(height: 100),
-          Container(height: 100),
-          const ThemeSwitcher()
-        ],
-      ),
-    );
+    return BaseScaffold(title: 'M O B I L E',body: Container());
   }
 }

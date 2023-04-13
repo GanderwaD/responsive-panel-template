@@ -1,17 +1,16 @@
 part of 'theme.dart';
 
 ThemeData lightThemeData = ThemeData.from(
-  textTheme: TextTheme(
+  useMaterial3: false,
+  textTheme: const TextTheme(
     //Body text theme
-    bodyLarge: GoogleFonts.nunitoSans(color: lightGrey, fontSize: 18),
-    bodyMedium: GoogleFonts.nunitoSans(color: lightGrey,fontSize: 16),
-    bodySmall: GoogleFonts.nunitoSans(color: lightGrey,fontSize: 14),
+    bodyLarge: TextStyle(color: lightGrey, fontSize: 18),
+    bodyMedium: TextStyle(color: lightGrey, fontSize: 16),
+    bodySmall: TextStyle(color: lightGrey, fontSize: 14),
     //Title text theme
-    titleLarge: GoogleFonts.nunitoSans(color: lightGrey, fontSize: 24, fontWeight: FontWeight.w600),
-    titleMedium: GoogleFonts.nunitoSans(color: lightGrey, fontSize: 22, fontWeight: FontWeight.w600),
-    titleSmall: GoogleFonts.nunitoSans(color: lightGrey, fontSize: 20, fontWeight: FontWeight.w600),
+    titleLarge: TextStyle(color: lightGrey, fontSize: 24, fontWeight: FontWeight.w600),
+    titleMedium: TextStyle(color: lightGrey, fontSize: 22, fontWeight: FontWeight.w600),
+    titleSmall: TextStyle(color: lightGrey, fontSize: 20, fontWeight: FontWeight.w600),
   ),
-  colorScheme: const ColorScheme.dark(
-    background: lightBackgroundColor,
-  ),
+  colorScheme: const ColorScheme.light(background: lightBackgroundColor, brightness: Brightness.dark),
 );
